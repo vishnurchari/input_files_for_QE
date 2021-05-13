@@ -1,10 +1,10 @@
 ''' This code is to generate input files  to choose your basis set size for convergence testing
 using Quantum Espresso software.'''
 file_count = 0
-in_name = str(input('enter the input the entire file directory  (with extension): ')) #Please enter the absolute path for the file
+in_name = str(input('enter the input the entire file directory  (with extension): ')) #Please enter the absolute path for the input file
 no_of_files = int(input('how many files you want to create: '))
-out_dir= str(input('enter the entire output file directory : '))
-out_name = str(input('enter the entire output file name  (without extension): '))
+out_dir= str(input('enter the entire output file directory : ')) # please enetr the directory for output file without specifying the name of the file
+out_name = str(input('enter the entire output file name  (without extension): ')) # by default the extention is ".in" . Please enter the name you want for your output files
 ecutwfc_start = int(input('enter the initial value for ecutwfc : '))
 ecutwfc_add = int(input('enter the addition factor for subsequent files : '))
 ecutrho_mult = int(input('enter the multiplication factor of ecutwfc: '))
@@ -39,5 +39,3 @@ for no in range(no_of_files):
                     out.write(i)
 
 print('Please check', out_dir,'for the input files for basis set convergence testing!')
-# /home/vishnu/qe_6.7/workQE/basic/tset/test
-# /home/vishnu/Documents/python/python_for_everybody/input.in
